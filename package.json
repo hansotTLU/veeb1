@@ -1,0 +1,30 @@
+{
+  "name": "vp2023",
+  "version": "1.0.0",
+  "description": "Veebiprogrammeerimise kursuse projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://hansotTLU@github.com/hansotTLU/veeb1.git"
+  },
+  "keywords": [
+    "veebiprogrammeerimine",
+    "node.js",
+    "express.js",
+    "tallinna",
+    "ülikool"
+  ],
+  "author": "Hans Oskar Trolla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hansotTLU/veeb1/issues"
+  },
+  "homepage": "https://github.com/hansotTLU/veeb1#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
