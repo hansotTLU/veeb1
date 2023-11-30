@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hans Oskar Trolla, veebiprogrammeerimine 2023</title>
+</head>
+<body>
+	<img src="/banner/banner.png" alt="Veebiprogrammeerimise kursuse bänner">
+	<h1><%= h1 %></h1>
+	<ul>
+		<% nimed.forEach(function(nimi){ %>
+			<li><%= nimi.firstName %> <%= nimi.lastName %>, mis salvestati <%= nimi.dateSaved %></li>
+		<% }); %>
+	</ul>
+	<hr>
+	<ul>
+		<li><a href="/">Avalehele</a></li>
+	</ul>
+	<hr>
+</body>
+</html>

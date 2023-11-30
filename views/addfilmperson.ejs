@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hans Oskar Trolla, veebiprogrammeerimine 2023</title>
+</head>
+<body>
+	<img src="/banner/banner.png" alt="Veebiprogrammeerimise kursuse bänner">
+	<h1>Eesti filmid</h1>
+	<hr>
+	<ul>
+		<li><a href="/eestifilm">Eesti filmide avaleht</a></li>
+		<li><a href="/eestifilm/lisaseos">Seo filmitegelane filmiga</a></li>
+		<li><a href="/eestifilm/filmiloend">Eesti filmide loend</a></li>
+		<li><a href="/eestifilm/singlemovie">Eesti filmide otsing</a></li>
+		<li><a href="/">Avalehele</a></li>
+	</ul>
+	<hr>
+	<h2>Lisa filmitegelane</h2>
+	<form method="POST">
+		<label for="firstNameInput">Filmitegelase eesnimi</label>
+		<input type="text" name="firstNameInput" id="firstNameInput" placeholder="Eesnimi" required>
+		<br>
+		<label for="lastNameInput">Filmitegelase perekonnanimi</label>
+		<input type="text" name="lastNameInput" id="lastNameInput" placeholder="Perekonnanimi" required>
+		<br>
+		<label for="birthDateInput">Filmitegelase sünnikuupäev</label>
+		<input type="date" name="birthDateInput" id="birthDateInput" placeholder="Sünnikuupäev" required>
+		<br>
+		<input type="submit" name="personSubmit" value="Salvesta">
+	</form>
+	<p><%= locals.notice || 'Ootel'%></p>
+</body>
+</html>

@@ -15,7 +15,25 @@
 	<ul>
 		<li><a href="/timenow">Aeg praegu</a></li>
 		<li><a href="/wisdom">Vanasõnad</a></li>
+		<li><a href="/nimed">Nimed</a></li>
+		<li><a href="/eestifilm">Eesti filmid</a></li>
+		<li><a href="/news">Uudised</a></li>
+		<li><a href="/photoupload">Fotode galeriisse laadimine</a> (ainult sisselogitud kasutajatele)</li>
+		<li><a href="/photogallery">Fotogalerii</a></li>
 	</ul>
+	<hr>
+	<h2>Logi sisse</h2>
+	<form method="POST">
+		<label for="emailInput">E-mail (kasutajatunnus)</label>
+		<input type="email" name="emailInput" id="emailInput">
+		<label for="passwordInput">Salasõna</label>
+		<input type="password" name="passwordInput" id="passwordInput">
+		<br>
+		<input type="submit" name="loginSubmit" value="Logi sisse">
+		<!-- <span> <%= locals.notice || "Ootel!" %></span> -->
+	</form>
+	<p><a href="/logout">Logi välja</a></p>
+	<p>Või loo endale <a href="/signup">kasutajakonto</a>!</p>
 	<hr>
 </body>
 </html>

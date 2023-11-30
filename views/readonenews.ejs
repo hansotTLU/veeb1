@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Hans Oskar Trolla, veebiprogrammeerimine 2023</title>
+</head>
+<body>
+    <img src="/banner/banner.png" alt="Veebiprogrammeerimise kursuse bänner">
+    <h1>Uudised</h1>
+    <hr>
+    <ul>
+        <li><a href="/news">Uudiste avaleht</a></li>
+        <li><a href="/news/add">Uudise lisamine</a></li>
+        <li><a href="/">Avalehele</a></li>
+    </ul>
+    <hr>
+    <h2>Uudise lugemine</h2>
+    
+    <% if (oneNews) { %>
+        <h3><%= oneNews.title %></h3>
+        <% const addedDate = new Date(oneNews.added); %>
+		<p>Lisatud: <%= addedDate.toLocaleDateString('et-EE') %></p>
+        <p><%= oneNews.content %></p>
+    <% } else { %>
+        <p>Uudis puudub või on kustutatud.</p>
+    <% } %>
+</body>
+</html>

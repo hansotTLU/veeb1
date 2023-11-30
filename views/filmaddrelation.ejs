@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hans Oskar Trolla, veebiprogrammeerimine 2023</title>
+</head>
+<body>
+	<img src="/banner/banner.png" alt="Veebiprogrammeerimise kursuse bänner">
+	<h1>Eesti filmid</h1>
+	<hr>
+	<ul>
+		<li><a href="/eestifilm">Eesti filmide avaleht</a></li>
+		<li><a href="/eestifilm/filmiloend">Eesti filmide loend</a></li>
+		<li><a href="/eestifilm/singlemovie">Eesti filmide otsing</a></li>
+		<li><a href="/">Avalehele</a></li>
+	</ul>
+	<hr>
+	<h2>Lisa filmitegelase seos</h2>
+	
+	<form method="POST">
+		<label for="filmPersonInput">Näitleja nimi</label>
+		<select name="filmPersonInput" id="filmPersonInput">
+			<option value="0" selected disabled>Vali näitleja nimi</option>
+			<% personList.forEach(function(person){ %>
+				<option value=<%= person.id %> ><%= person.first_name %> <%= person.last_name %></option>
+			<% }); %>
+		</select>
+		
+		<label for="filmInput">Film</label>
+		<select name="filmInput" id="filmInput">
+			<option value="0" selected disabled>Vali film</option>
+			<% movieList.forEach(function(movie){ %>
+				<option value=<%= movie.id %> ><%= movie.title %></option>
+			<% }); %>
+		</select>
+		
+		<label for="positionInput">Positsioon</label>
+		<select name="positionInput" id="positionInput">
+			<option value="0" selected disabled>Vali positsioon</option>
+			<% positionList.forEach(function(position){ %>
+				<option value=<%= position.id %>><%= position.position_name %></option>
+			<% }); %>
+		</select>
+		
+		<label for="roleInput">Roll</label>
+		<textarea id="roleInput" name="roleInput" placeholder="Roll..." required rows="1" cols="40" maxlength="30"></textarea>
+		
+		<br>
+		<input type="submit" name="personRelationSubmit" value="Salvesta">
+	</form>
+	<p><%= locals.notice %></p>
+</body>
+</html>
